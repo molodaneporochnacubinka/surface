@@ -198,8 +198,11 @@ html,body {
   background-color: #090c35;
 }
 
-.feature__title {
+.feature__title__box {
   display: flex;
+}
+
+.feature__title {
   font-family: "OpenSans-Bold", "Arial", sans-serif;
   font-weight: bold;
   font-size: 23px;
@@ -214,7 +217,10 @@ html,body {
 }
 
 .counter__number {
+  font-family: "OpenSans-Bold", "Arial", sans-serif;
+  font-weight: bold;
   font-size: 14px;
+  color: #c1c1c1;
 }
 
 .counter__number:before {
@@ -275,8 +281,6 @@ html,body {
 }
 
 .action .counter__number {
-  font-family: "OpenSans-Bold", "Arial", sans-serif;
-  font-weight: bold;
   color: #ffffff;
 }
 
@@ -335,6 +339,7 @@ html,body {
 }
 
 .footer__title__description {
+  display: block;
   margin-left: 5px;
   font-family: "OpenSans-Regular", "Arial", sans-serif;
   font-size: 14px;
