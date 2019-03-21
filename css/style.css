@@ -22,12 +22,17 @@ html,body {
   margin: 0;
   font-family: "OpenSans-Regular", "Arial", sans-serif;
   font-size: 15px;
+  overflow-x: hidden;
 }
+
+ .text {
+   padding-left: 6.25%;
+   padding-right: 6.25%;
+ }
 
 .header,
 .footer {
   position: relative;
-  width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -58,8 +63,6 @@ html,body {
   display: flex;
   width: 100%;
   height: 100%;
-  padding-left: 6.25%;
-  padding-right: 6.25%;
   box-sizing: border-box;
   color: #ffffff;
   flex-direction: column;
@@ -67,8 +70,9 @@ html,body {
   text-transform: uppercase;
 }
 
-.header .surface__logo__text__box {
-  margin-top: 33px;
+.header__body {
+  padding-top: 33px;
+  padding-bottom: 84px;
 }
 
 .surface__logo__text__box {
@@ -91,16 +95,8 @@ html,body {
 
 .header__title__item {
   max-width: 85%;
-}
-
-.header__title__item:nth-child(even) {
   margin-left: auto;
-  /* padding-top: 15px; */
   padding-top: 1rem;
-}
-
-.store__buttons {
-  margin-bottom: 84px;
 }
 
 .store__button {
@@ -109,14 +105,18 @@ html,body {
   width: 100%;
   height: 35px;
   margin-bottom: 14px;
-  /* padding-left: 80px; */
-  padding-left: 25%;
   font-size: 8px;
   color: #ffffff;
   background-color: #5e42b0;
   border-radius: 17px;
-  align-items: center;
   text-decoration: none;
+}
+
+.store__button__content {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 
 .store__button__label {
@@ -148,8 +148,6 @@ html,body {
 .athlete__title {
   margin: 0;
   padding-top: 15px;
-  padding-left: 6.25%;
-  padding-right: 6.25%;
   font-family: "OpenSans-Bold", "Arial", sans-serif;
   font-weight: bold;
   font-size: 50px;
@@ -170,8 +168,6 @@ html,body {
 }
 
 .feature {
-  padding-left: 6.25%;
-  padding-right: 6.25%;
   padding-top: 40px;
   padding-bottom: 40px;
   box-sizing: border-box;
@@ -259,12 +255,10 @@ html,body {
 }
 
 .action__body {
-  padding-left: 6.25%;
-  padding-right: 6.25%;
   padding-bottom: 40px;
 }
 
-.action__title__box {
+.action__body {
   position: relative;
 }
 
@@ -348,11 +342,7 @@ html,body {
 
 @media (min-width: 641px) and (max-width: 960px) {
 
-  .header__body,
-  .footer__body,
-  .action__body,
-  .athlete__title,
-  .feature {
+  .text {
     padding-left: 4.17%;
     padding-right: 4.17%;
   }
@@ -398,11 +388,7 @@ html,body {
 }
 
 @media (min-width: 961px) {
-  .header__body,
-  .footer__body,
-  .action__body,
-  .athlete__title,
-  .feature {
+  .text {
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -412,8 +398,8 @@ html,body {
   .surface__logo__text {
     width: 191px;
   }
-  .header .surface__logo__text__box {
-    margin-top: 45px;
+  .header__body {
+    padding-top: 45px;
   }
   .store__button:first-child {
     margin-right: 50px;
@@ -429,27 +415,32 @@ html,body {
     font-size: 20px;
   }
   .action {
+    position: relative;
     display: flex;
-    align-items: center;
+  }
+  .action__body {
+    position: static;
   }
   .action__preview {
     width: 50%;
+  }
+  .action__img {
+    min-height: 100%;
   }
   .action:nth-child(even) .action__preview {
     order: 1;
   }
   .action__body {
     width: 50%;
+    margin-top: 180px;
     box-sizing: border-box;
   }
-  .action__title__box {
-    position: relative;
-  }
   .action__counter {
-    top: 50%;
+    left: 50%;
+    top: 212px;
     width: 168px;
     height: 155px;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
   }
   .footer__logo__title {
     display: flex;
@@ -507,7 +498,7 @@ html,body {
   }
   .athlete__body:nth-child(even) .athlete__preview {
     top: 64px;
-    right: 45%;
+    left: 95%;
   }
   .features {
     margin-top: 0;
